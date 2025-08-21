@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="test.css">
+<style>
+  button.this:hover {
+        background-color: rgb(77, 0, 0);
+        color: #ffffff;
+        font-style:unset;
+    }
+</style>
+</head>
+<body>
+ <h1>this is a work sheet</h1>
+ <h2>i will guess the number youre thinking off by reading your mind</h2>
+ <input type="text" placeholder="think of a number">
+ <div id="loading-container" style="width: 300px; background: #d4d0d0; border-radius: 8px; overflow: hidden; margin: 20px 0;">
+   <div id="loading-bar" style="width: 0; height: 30px; background: #851046; transition: width 0.2s;"></div>
+ </div>
+ <button onclick="startLoading()">Start Loading</button>
+ <div id="loading-message" style="margin: 10px 0; font-weight: bold;"></div>
+ <script>
+   function startLoading() {
+     const bar = document.getElementById('loading-bar');
+     const msg = document.getElementById('loading-message');
+     const input = document.querySelector('input[type="text"]');
+     let width = 0;
+     bar.style.width = '0';
+     msg.textContent = 'getting data ready';
+     const chosenNumber = input.value.trim();
+     const interval = setInterval(() => {
+       if (width >= 100) {
+         clearInterval(interval);
+         if (chosenNumber) {
+           msg.textContent = `Your number is: ${chosenNumber}`;
+         } else {
+           msg.textContent = 'enter a number';
+         }
+       } else {
+         width += 2;
+         bar.style.width = width + '%';
+         if (width > 80) {
+           msg.textContent = 'guessing the number...';
+         } else if (width > 40) {
+           msg.textContent = 'Just a moment...';
+         } else {
+           msg.textContent = 'loading...';
+         }
+       }
+     }, 30);
+   }
+ </script>
+ <button type="button" class="this">hover over this button with your mouse to reveal color</button>
+</body>
+</html>

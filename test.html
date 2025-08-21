@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset ="UTF-8" >
+    <title>shapes and colors</title>  
+    </head>
+    <body>
+     <h3> test shapes and colors</h3>
+     <canvas id="canvas" width="250" height="250"></canvas> <!-- the start of a canvas-->
+     <script>
+       const canvas = document.getElementById("canvas");
+       const ctx = canvas.getContext("2d"); // 3d is cooler but i cant use it 
+       ctx.strokeStyle = "black"; // set line color
+       ctx.lineWidth = 4; // set line width
+       ctx.strokeStyle = "black";
+       ctx.lineWidth = 4;
+       // Left eye
+       ctx.beginPath();
+       ctx.moveTo(95, 90);
+       ctx.lineTo(115, 90);
+       ctx.stroke();
+       // Right eye
+       ctx.beginPath();
+       ctx.moveTo(135, 90);
+       ctx.lineTo(155, 90);
+       ctx.stroke();
+        // SMILE
+       ctx.beginPath();
+       ctx.arc(125, 140, 35, 0.15 * Math.PI, 0.85 * Math.PI, false);
+       ctx.stroke();
+      </script>
+     <h4> this is a smile</h4>
+     <stronge> now ill do a circle</stronge>
+     <br><br><br>
+     <canvas id="canvas2" width="250" height="250" style="border: 1px solid pink;"></canvas> <!-- the start of a canvas-->
+     <script>
+       const canvas2 = document.getElementById("canvas2");
+       const ctx2 = canvas2.getContext('2d'); // 3d is cooler but i cant use it 
+       ctx2.shadowColor = "black"; // the color of the shadow
+       ctx2.shadowBlur = 15;
+       ctx2.shadowOffsetX = 10;
+       ctx2.shadowOffsetY = 10;
+       ctx2.fillStyle = "lightpink"; // it will be pink
+       ctx2.beginPath();
+       ctx2.arc(125, 125, 50, 0, Math.PI*2); // circle itself
+       ctx2.fill(); //fill it with color
+     </script>
+     <br><br> <br> <br> <br> <br>  
+     <strong> now ill do the japanese flag</strong>
+     <br><br><br><br><br><br>
+     <canvas id="canvas3" width="300" height="200" style="border: 1px solid black;"></canvas>
+     <script>
+       const canvas3 = document.getElementById("canvas3");
+       const ctx3 = canvas3.getContext("2d");
+       ctx3.fillStyle = "white";
+       ctx3.fillRect(0, 0, 300, 200); // background white
+       ctx3.fillStyle = "darkred"; // color of circle
+       ctx3.beginPath();
+       ctx3.arc(150, 100, 50, 0, Math.PI * 2); // circle
+       ctx3.fill();
+       ctx3.font = "20px Arial";
+       ctx3.textAlign = "center"; // the text will be in the center
+       ctx3.fillText("japanese flag", 150, 30);
+
+     </script>
+     </body>
+</html>

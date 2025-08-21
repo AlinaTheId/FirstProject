@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Projects</title>
+  <style>
+    body {
+      background: lightgrey;
+    }
+    .center-title {
+      text-align: center;
+      color: black;
+    }
+    .info p,
+    .info strong {
+      display: inline;
+      margin-right: 5px;
+    }
+    .image {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;  
+      margin: 0 auto;  
+      background-image: url('coding.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 34px; 
+      border: solid 3px rgb(202, 112, 154);
+      border-radius: 50%;
+    }
+    .hobbies-skills h3 {
+      text-align: center;
+      color: black;
+    }
+    .contact {
+  position: relative;
+  margin: 20px 0;
+    }
+     .reveal-checkbox { 
+      display: none;
+    }
+    .reveal-bar {
+      text-align: center;
+  margin-bottom: 0 auto;
+      display: block;
+      width: 200px;
+      height: 35px;
+  background-color: darkcyan;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+    } 
+    .email-text {
+      display: none;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .reveal-checkbox:checked + .reveal-bar + .email-text {
+      display: block;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .card  {
+      box-sizing: border-box;
+      width:300px;
+      height:200px;
+      background-image: url(background.jpg);
+      background-size: contain;
+      background-position: center;
+      border: 5px solid rgb(148, 187, 174);
+      border-radius: 15px;
+      padding: 34px;
+      margin: 30px auto;
+      text-align: center;
+    }
+    .card .strong1 {
+      text-align: center;
+    }
+    .card .strong2 {
+      text-align: center;
+    }
+    .card .strong3 {
+      text-align: center;
+    }
+    .card .strong4 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="center-title">
+  <h2>Welcome to My First Project</h2>
+  <strong>About Me and My Educational Background</strong>
+</div>
+<br><br>
+<div class="info">
+  <p>My name is</p><strong>Alina, and I am 22 years old.</strong>
+  <p>I currently reside in</p><strong>Haifa, Israel.</strong>
+  <p>At present, I am enrolled in online courses focused on <strong>Full Stack</strong> development. Additionally, I am an incoming student at Ort College in Kiryat Bialik, where I will pursue a three-year program in <strong>Software Engineering</strong>.
+  From a young age, I have always had a keen interest in computers, and I was recently introduced to the fields of full stack development and coding.</p>
+</div>
+<br><br>
+<div class="image"> 
+</div>
+<div class="hobbies-skills">
+  <h3>My Hobbies and Skills</h3>
+  <p>I enjoy reading books and playing video games, and I am the owner of two dogs.
+    My primary objective is to complete my studies and establish a career in a field for which I have a genuine passion.
+    At this stage, I possess a foundational knowledge of HTML and CSS, and I am dedicated to expanding my expertise each day. I also appreciate incorporating humor into my work when appropriate.
+  </p>
+</div>
+<div class="work">
+  <p>Here are some of my recent projects:</p>
+  <ul>
+    <li><a href="test.html">Shapes and Colors</a></li>
+    <li><a href="work.html">Guess Your Thoughts</a></li>
+  </ul>
+</div>
+<br>
+<div class="card">
+  <div class="strong1"><strong>Alina vytreakov.</strong> </div>
+  <div class="strong2"><strong>22 years old.</strong> </div>
+  <div class="strong3"><strong>Haifa Israel.</strong> </div>
+  <div class="strong4"><strong>Full Stack/Software Practical Engineer student.</strong> </div>
+</div>
+<br>
+<div class="contact">
+  <p>If you wish to contact me, please use the email address provided below:</p>
+  <input type="checkbox" id="reveal-email" class="reveal-checkbox">
+  <label for="reveal-email" class="reveal-bar"><b>click here to reveal email</b></label>
+  <div class="email-text">alina2772003@gmail.com</div>
+  </div>
+
+</body>
+</html>
